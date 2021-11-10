@@ -1,5 +1,5 @@
 # JetSoftPro-Trainee-Center
-Hi, I'm Halyna and I have following skills:
+Hi, I'm Halyna and I have following tech skills:
 - GitHub
 - HTML/CSS
 - SASS 
