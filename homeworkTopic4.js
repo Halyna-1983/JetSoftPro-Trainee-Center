@@ -46,18 +46,32 @@ console.log(Math.max.apply(Math, num));
 //    and return a string with car registration number, branch and color. 
 //    Please make examples for three different cars
 
+const ford = { brand: "Ford", registrationNumber: "AB1234", color: "red" };
+const citroen = { brand: "Citroen", registrationNumber: "BX9874", color: "grey" };
+const toyota = { brand: "Toyota", registrationNumber: "GT5678", color: "white" };
+
+function displayCarDetails(ownerName) {
+    console.log(`Car ${this.brand} with registration number ${this.registrationNumber}, color ${this.color} belongs to ${ownerName}.`)
+}
+
+displayCarDetails.call(ford, "Alex");
+displayCarDetails.call(citroen, "Jack");
+displayCarDetails.call(toyota, "Nick");
+
 
 // 4.We want this code to log out “hey amy”, but it logs out “hey arnold” - fix that 
  
-// function greet (person) {
-//   if (person.name ==  'amy' ) {
-//     return 'hey amy'
-//   } else {
-//     return 'hey arnold'
-//   }
-// }
-// const amy = {name: 'amy'}
-// greet(amy)
+function greet (person) {
+  if (person.name ==  'amy' ) {
+    return 'hey amy'
+  } else {
+    return 'hey arnold'
+  }
+}
+const person = {name: 'amy'}
+console.log(greet(person));
+
+
 
 // 5.We want this code to log out the numbers 0, 1, 2, 3 in that order,
 // but it doesn’t do what we expect - fix that(find two solutions)
@@ -65,3 +79,11 @@ console.log(Math.max.apply(Math, num));
 // for (var i = 0; i < 4; i++) {
 //   setTimeout(() => console.log(i), 0)
 // }
+
+for (let i = 0; i < 4; i++) {
+  setTimeout(() => console.log(i), 0)
+}
+
+for (var i = 0; i < 4; i++) {
+  console.log(i)
+}
