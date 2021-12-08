@@ -9,7 +9,7 @@
 
 let exponent = function(x, i) 
 {
-   if (i === 0) 
+   if (i === 0 || i < 0) 
    {
     return "invalid degree";
    } else
@@ -85,5 +85,11 @@ for (let i = 0; i < 4; i++) {
 }
 
 for (var i = 0; i < 4; i++) {
-  console.log(i)
+  ((i) => {
+    setTimeout(() => console.log(i), 0);
+  })(i);
 }
+
+// for (var i = 0; i < 4; i++) {
+//   console.log(i)
+// }
