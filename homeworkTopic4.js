@@ -1,32 +1,23 @@
 
 //submit homework to the repository that you created for git lecture 
 
-
-
 // 1. Compute the exponent of a number (using recursion);
 //8^2 = 8 x 8 = 64
 
-
-let exponent = function(x, i) 
-{
-   if (i === 0 || i < 0) 
-   {
-    return "invalid degree";
-   } else
-       if (i === 1       
-       ) {
-           return x;
-       }
-        else 
-            {
-                return x * exponent(x, i-1);
-            }
-};
+let exponent = function (x, i) {
+  if (i === 0) {
+    return 1
+  } else if (i > 0) {
+    return x * exponent(x, i - 1);
+  } else {
+    return exponent(x, i + 1) / x;
+  }
+}
 
 console.log(exponent(8, 5));
 console.log(exponent(8, 1));
 console.log(exponent(8, 0));
-
+console.log(exponent(5, -4));
 
 
 // 2. Write functions min and max that will find min and max number in array using apply
